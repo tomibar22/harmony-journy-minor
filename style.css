@@ -373,21 +373,33 @@ button:disabled {
         height: 38px;
     }
     
-    /* Smaller selectable icons */
+    /* Smaller selectable icons - optimized for grid layout */
     .icon-item {
-        width: 50px;
+        width: 70px;
+        height: 70px;
         padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
     }
     
     .icon {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
     
-    /* Compact icon layout */
+    /* Compact icon layout - special portrait mode for 2 rows of 3 icons */
     .icons-container {
-        gap: 12px;
-        margin: 10px 0;
+        gap: 8px;
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-items: center;
     }
     
     /* Remove hover effects to save space */
@@ -427,10 +439,15 @@ button:disabled {
     }
     
     .icon-selection {
-        margin: 15px 0 5px;
+        margin: 10px 0 5px;
     }
     
     .actions {
-        margin: 15px 0;
+        margin: 8px 0;
+    }
+    
+    /* Better spacing for the heading in icon selection */
+    .icon-selection h2 {
+        margin-bottom: 5px;
     }
 }
