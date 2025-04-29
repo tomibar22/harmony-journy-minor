@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>מסע הרמוני</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>איך נראה המסע שלך?</h1>
+        <p class="instructions">ניתן לגרור את החוויות אל תוך המשבצות כדי ליצור מסע מהבית וחזרה לבית</p>
+        <p class="mobile-instruction">במכשיר נייד: לחץ על החוויה וגרור אותה למשבצת</p>
+        
+        <div class="journey-container">
+            <div class="journey-path">
+                <div class="journey-slot home-slot">
+                    <img src="icons/house.png" alt="בית התחלה" class="placed-icon fixed-icon" data-degree="1">
+                </div>
+                <div class="journey-slot droppable" id="slot1"></div>
+                <div class="journey-slot droppable" id="slot2"></div>
+                <div class="journey-slot droppable" id="slot3"></div>
+                <div class="journey-slot home-slot">
+                    <img src="icons/house.png" alt="בית סיום" class="placed-icon fixed-icon" data-degree="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-selection">
+            <h2>חוויות לבחירה</h2>
+            <div class="icons-container">
+                <div class="icon-item" draggable="true">
+                    <img src="icons/forest.png" alt="יער" class="icon" data-degree="2">
+                </div>
+                <div class="icon-item" draggable="true">
+                    <img src="icons/park.png" alt="פארק" class="icon" data-degree="3">
+                </div>
+                <div class="icon-item" draggable="true">
+                    <img src="icons/winter.png" alt="חורף" class="icon" data-degree="4">
+                </div>
+                <div class="icon-item" draggable="true">
+                    <img src="icons/cave.png" alt="מערה" class="icon" data-degree="5">
+                </div>
+                <div class="icon-item" draggable="true">
+                    <img src="icons/frigate.png" alt="ספינה" class="icon" data-degree="6">
+                </div>
+                <div class="icon-item" draggable="true">
+                    <img src="icons/saturn.png" alt="כוכב" class="icon" data-degree="7">
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="reset-btn">להתחיל מחדש</button>
+        </div>
+
+        <div class="player-container">
+            <div class="journey-display">
+                <div id="journey-sequence"></div>
+            </div>
+            <div class="current-note">
+                <span id="current-degree"></span>
+            </div>
+        </div>
+
+        <div id="qr-container" class="qr-container">
+            <h3>שתף את המסע שלך</h3>
+            <div id="qr-code"></div>
+            <p id="journey-code"></p>
+            <p class="share-instruction">סרוק את הקוד QR או לחץ על הקוד למעלה כדי להעתיק קישור לשיתוף</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
